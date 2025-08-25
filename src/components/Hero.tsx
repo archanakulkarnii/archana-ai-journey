@@ -40,10 +40,10 @@ const Hero = () => {
               variant="outline" 
               size="lg"
               className="border-primary/30 hover:bg-primary/5"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1wanimG8aqa_XhmBPhhWZfuoriwkKrAj2', '_blank')}
             >
               <Download className="mr-2 h-5 w-5" />
-              View Projects
+              Download Resume
             </Button>
           </div>
           
