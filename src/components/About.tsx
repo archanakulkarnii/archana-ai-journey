@@ -4,8 +4,7 @@ import { Brain, Code, Database, Laptop } from "lucide-react";
 
 const About = () => {
   const skills = [
-    { category: "Programming", items: ["Python", "Data Structures", "HTML & CSS", "MySQL"], icon: Code },
-    { category: "AI/ML", items: ["Machine Learning", "Regression Analysis", "Model Evaluation"], icon: Brain },
+    { category: "Programming & Technical Skills", items: ["Python", "Data Structures", "Machine Learning", "MySQL", "HTML & CSS (basic)"], icon: Code },
     { category: "Tools", items: ["Flask", "Streamlit", "SQLite", "Bootstrap"], icon: Laptop },
     { category: "Languages", items: ["English", "Hindi", "Kannada"], icon: Database }
   ];
@@ -28,7 +27,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skillGroup, index) => {
             const IconComponent = skillGroup.icon;
             return (
