@@ -46,8 +46,8 @@ const Education = () => {
   return (
     <section id="education" className="py-20 bg-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl font-bold mb-8 bg-gradient-primary bg-clip-text text-transparent">
             Education
           </h2>
         </div>
@@ -89,9 +89,9 @@ const Education = () => {
         <div className="space-y-8 max-w-4xl mx-auto">
           {/* Achievements */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6 flex items-center">
-              <Award className="mr-3 h-6 w-6 text-primary" />
-              Achievements
+            <h3 className="text-3xl font-bold mb-8 flex items-center justify-center lg:justify-start">
+              <Award className="mr-4 h-8 w-8 text-primary" />
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Achievements</span>
             </h3>
             <Card className="shadow-card">
               <CardContent className="p-6">
@@ -109,9 +109,9 @@ const Education = () => {
 
           {/* Certifications */}
           <div>
-            <h3 className="text-2xl font-semibold mb-6 flex items-center">
-              <GraduationCap className="mr-3 h-6 w-6 text-primary" />
-              Certifications
+            <h3 className="text-3xl font-bold mb-8 flex items-center justify-center lg:justify-start">
+              <GraduationCap className="mr-4 h-8 w-8 text-primary" />
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Certifications</span>
             </h3>
             <div className="space-y-3">
               {certifications.map((cert, index) => (
