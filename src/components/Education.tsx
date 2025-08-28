@@ -86,7 +86,7 @@ const Education = () => {
         </div>
 
         {/* Achievements & Certifications */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="space-y-8 max-w-4xl mx-auto">
           {/* Achievements */}
           <div>
             <h3 className="text-2xl font-semibold mb-6 flex items-center">
