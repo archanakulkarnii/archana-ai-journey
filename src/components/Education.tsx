@@ -53,29 +53,31 @@ const Education = () => {
         </div>
 
         {/* Education */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="space-y-6">
+        <div className="max-w-5xl mx-auto mb-20">
+          <div className="space-y-8">
             {education.map((edu, index) => (
-              <Card key={index} className="shadow-card hover:shadow-glow transition-all duration-300 animate-slide-in">
-                <CardHeader>
+              <Card key={index} className="shadow-glow hover:shadow-xl transition-all duration-500 animate-fade-in border-primary/10 bg-gradient-to-r from-background via-background/95 to-background/90">
+                <CardHeader className="pb-4">
                   <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle className="text-lg">{edu.degree}</CardTitle>
-                      {edu.field && <CardDescription className="text-primary font-medium">{edu.field}</CardDescription>}
-                      <CardDescription className="mt-1">{edu.institution}</CardDescription>
+                    <div className="flex-1">
+                      <CardTitle className="text-xl font-bold text-foreground mb-2">{edu.degree}</CardTitle>
+                      {edu.field && <CardDescription className="text-lg text-primary font-semibold mb-1">{edu.field}</CardDescription>}
+                      <CardDescription className="text-base text-muted-foreground font-medium">{edu.institution}</CardDescription>
                     </div>
                     {edu.current && (
-                      <Badge className="bg-gradient-primary">Current</Badge>
+                      <Badge className="bg-gradient-primary text-white px-4 py-2 text-sm font-semibold shadow-lg">
+                        Current
+                      </Badge>
                     )}
                   </div>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0">
                   <div className="flex justify-between items-center">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="mr-2 h-4 w-4" />
-                      {edu.duration}
+                    <div className="flex items-center text-base text-muted-foreground">
+                      <Calendar className="mr-3 h-5 w-5 text-primary" />
+                      <span className="font-medium">{edu.duration}</span>
                     </div>
-                    <Badge variant="outline" className="font-semibold text-primary">
+                    <Badge variant="outline" className="font-bold text-lg text-primary border-primary/30 px-4 py-2">
                       {edu.grade}
                     </Badge>
                   </div>
@@ -86,20 +88,20 @@ const Education = () => {
         </div>
 
         {/* Achievements & Certifications */}
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <div className="space-y-12 max-w-5xl mx-auto">
           {/* Achievements */}
           <div>
             <h3 className="text-3xl font-bold mb-8 flex items-center justify-center lg:justify-start">
               <Award className="mr-4 h-8 w-8 text-primary" />
               <span className="bg-gradient-primary bg-clip-text text-transparent">Achievements</span>
             </h3>
-            <Card className="shadow-card">
-              <CardContent className="p-6">
-                <ul className="space-y-3">
+            <Card className="shadow-glow hover:shadow-xl transition-all duration-500 border-primary/10 bg-gradient-to-br from-background via-background/95 to-background/90">
+              <CardContent className="p-8">
+                <ul className="space-y-4">
                   {achievements.map((achievement, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="w-2 h-2 bg-gradient-primary rounded-full mt-2 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{achievement}</span>
+                    <li key={index} className="flex items-start group">
+                      <div className="w-3 h-3 bg-gradient-primary rounded-full mt-2 mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-base leading-relaxed font-medium text-foreground">{achievement}</span>
                     </li>
                   ))}
                 </ul>
@@ -113,12 +115,12 @@ const Education = () => {
               <GraduationCap className="mr-4 h-8 w-8 text-primary" />
               <span className="bg-gradient-primary bg-clip-text text-transparent">Certifications</span>
             </h3>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {certifications.map((cert, index) => (
-                <Card key={index} className="shadow-card">
-                  <CardContent className="p-4">
-                    <h4 className="font-medium">{cert.name}</h4>
-                    <p className="text-sm text-muted-foreground">{cert.provider}</p>
+                <Card key={index} className="shadow-glow hover:shadow-xl transition-all duration-500 border-primary/10 bg-gradient-to-r from-background via-background/95 to-background/90 group">
+                  <CardContent className="p-6">
+                    <h4 className="font-bold text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{cert.name}</h4>
+                    <p className="text-base text-muted-foreground font-medium">{cert.provider}</p>
                   </CardContent>
                 </Card>
               ))}
